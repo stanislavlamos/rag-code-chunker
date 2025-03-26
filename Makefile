@@ -13,14 +13,14 @@ backend:
 
 # Run frontend server
 frontend:
-	cd frontend && streamlit run app.py
+	streamlit run app.py
 
 # Run both servers (in separate terminals)
 run:
 	@echo "Starting backend server..."
 	@cd backend && uvicorn api.main:app --reload & \
 	echo "Starting frontend server..." && \
-	cd frontend && streamlit run app.py
+	streamlit run app.py
 
 # Clean up Python cache files
 clean:
